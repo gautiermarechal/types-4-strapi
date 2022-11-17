@@ -85,7 +85,7 @@ module.exports = (schemaPath, interfaceName) => {
     // Enumeration
     // -------------------------------------------------
     else if (attributeValue.type === 'enumeration') {
-      const enumOptions = attributeValue.enum.map((v) => `'${v}'`).join(' | ');
+      const enumOptions = attributeValue.enum.map((v) => `"${v}"`).join(' | ');
       tsProperty = `    ${attributeName}: ${enumOptions};\n`;
     }
     // -------------------------------------------------
